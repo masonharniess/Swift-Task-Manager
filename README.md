@@ -55,9 +55,7 @@ Upon navigation to `http://localhost:3000`, an automatic redirection to the logi
    First Name: John
    Last Name:  Doe
    ```
-3. Press the `Enter` key or click the `Register` button.
-
-   A redirection to the dashboard page (`/dashboard`) will occur.
+3. Press the `Enter` key or click the `Register` button. A redirection to the dashboard page (`/dashboard`) will occur.
 
 ### Login
 
