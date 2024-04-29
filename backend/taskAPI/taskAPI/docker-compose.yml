@@ -1,0 +1,10 @@
+﻿services:
+  taskapi:
+    image: taskapi
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "6001:80"
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development

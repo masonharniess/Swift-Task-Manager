@@ -1,0 +1,100 @@
+/* TaskItem.module.css */
+
+.task {
+    display: flex;
+    padding-bottom: 10px;
+}
+
+.taskContent {
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+}
+
+.checkIcon {
+    display: flex;
+    align-items: center;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.taskName {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.taskNameEdit {
+    color: #797676;
+    font-size: 15px;
+    border: none;
+    outline: none;
+}
+
+.taskButtons {
+    display: flex;
+}
+
+.editIcon, .deleteIcon, .archiveIcon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    margin-right: 7px;
+}
+
+.editIcon img, .deleteIcon img, .archiveIcon img {
+    transform: scale(1.0);
+    transition: transform 0.5s ease;
+}
+
+.editIcon img:hover, .deleteIcon img:hover, .archiveIcon img:hover {
+    transform: scale(1.1);
+}
+
+.archivedTaskName {
+    text-decoration: line-through;
+    color: #808080;
+}
+
+.iconContainer {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.tooltip {
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #fff;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+    font-size: 13px;
+    padding: 5px 10px;
+    border-radius: 4px;
+    white-space: nowrap;
+    z-index: 1000;
+    border: 1px solid #d9d5d4;
+    /* Apply the animation */
+    animation: fadeInTooltip 0.1s ease-out;
+    animation-delay: 0.2s;
+    animation-fill-mode: forwards;
+    /* Initially hidden */
+    opacity: 0;
+    visibility: hidden;
+}
+
+
+@keyframes fadeInTooltip {
+    from {
+        opacity: 0;
+        visibility: hidden;
+    }
+    to {
+        opacity: 1;
+        visibility: visible;
+    }
+}

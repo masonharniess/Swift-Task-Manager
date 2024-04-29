@@ -1,0 +1,47 @@
+.navBar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+
+    background-color: white;
+    border: 1px solid #d9d5d4;
+    padding: 0 20px;
+}
+
+.navButtons {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
+}
+
+.button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    color: white;
+    background-color: #007bff;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-left: 10px;
+}
+
+.button:hover {
+    background-color: #0056b3;
+}
+
+.faIcon {
+
+}
+
+.navBarIconContainer {
+    margin-right: 8px;
+    display: flex;
+    align-items: center;
+}
+
+.weatherText {
+    display: flex;
+    align-items: center;
+}

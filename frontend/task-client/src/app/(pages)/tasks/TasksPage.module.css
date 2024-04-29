@@ -1,0 +1,4 @@
+.tasksLayout {
+    display: flex;
+    flex-direction: row; /* Adjusts children components in a row */
+}

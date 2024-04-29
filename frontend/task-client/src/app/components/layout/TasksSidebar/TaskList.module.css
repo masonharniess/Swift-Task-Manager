@@ -1,0 +1,143 @@
+/* TaskList.module.css */
+
+.taskListColumn {
+    border-right: 1px solid #d9d5d4;
+    width: 300px;
+    position: fixed;
+    left: 72px;
+    top: 60px;
+    z-index: 98;
+    height: 100%;
+    padding: 12px;
+    transition: left 0.5s ease;
+}
+
+.taskListShifted {
+    left: 170px;
+}
+
+.taskListColumn, .taskListShifted {}
+
+.taskSectionWrapper {}
+
+.currentTasksHeader, .completedTasksHeader, .archivedTasksHeader {
+    border-bottom: 1px solid #d9d5d4;
+    font-size: 14px;
+    color: #797676;
+    user-select: none;
+    display: flex;
+    justify-content: space-between;
+}
+
+.currentTasksHeader {
+    padding-bottom: 12px;
+}
+
+.completedTasksHeader, .archivedTasksHeader {
+    padding-bottom: 8px;
+    cursor: pointer;
+}
+
+.archivedTasksHeader {
+}
+
+
+
+
+.caretDown, .caretRight {
+    transition: transform 0.4s ease;
+}
+
+.caretRight {
+    transform: rotate(-90deg);
+}
+
+.headerButtonsWrapper {
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.headerButtons {
+    position: relative;
+    margin-right: 7px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.headerButtons img {
+    transform: scale(1.0);
+}
+
+.headerButtons img:hover {
+    transform: scale(1.1);
+}
+
+.headerButtons img, .headerButtons img:hover {
+    transition: transform 0.5s ease;
+}
+
+.taskSectionTitle {
+    display: flex;
+    align-items: center;
+}
+
+.taskList {
+    list-style: none;
+    padding: 12px 0;
+    font-size: 15px;
+}
+
+.newTaskInput {
+    flex-grow: 1;
+    margin-right: 10px;
+    border: none;
+    outline: none;
+    font-size: 15px;
+    margin-bottom: 10px;
+}
+
+.archivedHeaderMargin {
+    margin-top: 8px;
+}
+
+.noTasksPadding {
+    padding: 4px;
+}
+
+.tooltip {
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #fff;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+    font-size: 13px;
+    padding: 5px 10px;
+    border-radius: 4px;
+    white-space: nowrap;
+    z-index: 1000;
+    border: 1px solid #d9d5d4;
+
+    animation: fadeInTooltip 0.1s ease-out;
+    animation-delay: 0.2s;
+    animation-fill-mode: forwards;
+
+    opacity: 0;
+    visibility: hidden;
+}
+
+
+@keyframes fadeInTooltip {
+    from {
+        opacity: 0;
+        visibility: hidden;
+    }
+    to {
+        opacity: 1;
+        visibility: visible;
+    }
+}
+
+
