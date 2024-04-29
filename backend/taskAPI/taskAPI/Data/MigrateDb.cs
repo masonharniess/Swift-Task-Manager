@@ -9,9 +9,9 @@ public class MigrateDb
 {
     public static void InitDb(WebApplication app)
     {
-        int retry = 10;
+        int reattempt = 5;
 
-        while (retry > 0)
+        while (reattempt > 0)
         {
             try
             {
@@ -23,9 +23,9 @@ public class MigrateDb
             }
             catch (SqliteException e)
             {
-                retry -= 1;
-                Console.WriteLine("Sqlite connection failed. Attempting to connect in 5 seconds. Retries left: " + retry);
-                Thread.Sleep(5000);
+                reattempt -= 1;
+                Console.WriteLine("Sqlite connection failed. Reattempts left: " + reattempt);
+                Thread.Sleep(3000);
             }
         }
     }
